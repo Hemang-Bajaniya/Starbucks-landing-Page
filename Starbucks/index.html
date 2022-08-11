@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="starbucks-logo-png-transparent-297x300.png" alt="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's new</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    
+    <div class="main">
+        <div class="txt">
+        It's not just a coffee<br>
+        it's a <span id="star">Starbucks</span>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ipsum! Quas nisi ad in, eligendi nam perferendis expedita incidunt, perspiciatis eum asperiores dolore consequatur doloribus sunt ex illo fugit molestiae maiores aliquam rem necessitatibus.</p>
+        <button>Learn More</button>
+    </div>
+        <div class="ibox">
+        <div class="circle" id="circle"></div>
+             <img id="coffee" src="coffe-3.png" alt="coffe-1">
+        </div>
+    </div>
+
+    <div class="cup">
+    <ul>
+        <li><img src="coffe-1.png" alt="coffe-demo" onclick="imgSlider('coffe-1.png','#cbb190')"></li>
+        <li><img src="coffe-3.png" alt="coffe-demo" onclick="imgSlider('coffe-3.png','#00643c')"></li>
+        <li><img src="coffe-4.png" alt="coffe-demo" onclick="imgSlider('coffe-4.png','#e6ad00')"></li>
+    </ul>
+    </div>
+
+    <footer>
+        <div class="row">
+            Company
+            <div class="col">
+                <ul>
+                    <li><a href="#">Market</a></li>
+                    <li><a href="#">Branch</a></li>
+                    <li><a href="#">Stock market</a></li>
+                    <li><a href="#">Headqtr</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            FAQ
+            <div class="col">
+                <ul>
+                    <li><a href="">What is starbucks?</a></li>
+                    <li><a href="">Stock price</a></li>
+                    <li><a href="">Goal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            Reviews
+            <div class="col">
+                <ul>
+                    <li><a href="#">Google</a></li>
+                    <li><a href="#">Forbs</a></li>
+                    <li><a href="#">Justdial</a></li>
+                    <li><a href="#">Walmart</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            Need a help
+            <div class="col">
+            <ul>
+                <li><a href="#">100-200-300</a></li>
+                <li><a href="#">E-mail</a></li>
+                <li><a href="#">Customer care</a></li>
+            </ul>
+            </div>
+        </div>
+        <p>Copyrighted &copy; by Starbucks limited</p>
+        <div class="social">
+            <a><img src="twitter.svg"></a>
+            <a><img src="facebook.svg"></a>
+            <a><img src="instagram.svg"></a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    function imgSlider(anything,col) {
+        document.querySelector('#coffee').src = anything;
+        document.getElementById('circle').style.background = col;
+    }
+</script>
+</html>
