@@ -188,6 +188,7 @@ footer .row {
     position: relative;
     flex-direction: column;
 }
+
 footer .row .col {
     left: 0%;
 }
@@ -250,4 +251,72 @@ footer .social img:hover {
 footer::selection {
     color: initial;
     background-color: none;
+}
+
+.newsletter {
+    position: relative;
+    top: 150px;
+    background: linear-gradient(135deg, #00643c 0%, #00b66d 100%);
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    width: 250px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+.newsletter-form input:focus {
+    box-shadow: 0 0 10px rgba(48, 48, 48, 0.3);
+}
+
+.newsletter-form button {
+    /* padding: 12px 30px; */
+    background-color: white;
+    color: #00643c;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid white;
+}
+
+.newsletter-form button:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
