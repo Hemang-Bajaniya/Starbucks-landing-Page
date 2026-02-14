@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="starbucks-logo-png-transparent-297x300.png" alt="logo">
@@ -22,26 +24,39 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </header>
-    
+
     <div class="main">
         <div class="txt">
-        It's not just a coffee<br>
-        it's a <span id="star">Starbucks</span>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ipsum! Quas nisi ad in, eligendi nam perferendis expedita incidunt, perspiciatis eum asperiores dolore consequatur doloribus sunt ex illo fugit molestiae maiores aliquam rem necessitatibus.</p>
-        <button>Learn More</button>
-    </div>
+            It's not just a coffee<br>
+            it's a <span id="star">Starbucks</span>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, ipsum! Quas nisi ad in, eligendi nam
+                perferendis expedita incidunt, perspiciatis eum asperiores dolore consequatur doloribus sunt ex illo
+                fugit molestiae maiores aliquam rem necessitatibus.</p>
+            <button>Learn More</button>
+        </div>
         <div class="ibox">
-        <div class="circle" id="circle"></div>
-             <img id="coffee" src="coffe-3.png" alt="coffe-1">
+            <div class="circle" id="circle"></div>
+            <img id="coffee" src="coffe-3.png" alt="coffe-1">
         </div>
     </div>
 
     <div class="cup">
-    <ul>
-        <li><img src="coffe-1.png" alt="coffe-demo" onclick="imgSlider('coffe-1.png','#cbb190')"></li>
-        <li><img src="coffe-3.png" alt="coffe-demo" onclick="imgSlider('coffe-3.png','#00643c')"></li>
-        <li><img src="coffe-4.png" alt="coffe-demo" onclick="imgSlider('coffe-4.png','#e6ad00')"></li>
-    </ul>
+        <ul>
+            <li><img src="coffe-1.png" alt="coffe-demo" onclick="imgSlider('coffe-1.png','#cbb190')"></li>
+            <li><img src="coffe-3.png" alt="coffe-demo" onclick="imgSlider('coffe-3.png','#00643c')"></li>
+            <li><img src="coffe-4.png" alt="coffe-demo" onclick="imgSlider('coffe-4.png','#e6ad00')"></li>
+        </ul>
+    </div>
+
+    <div class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest offers, new products, and exclusive deals.</p>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
 
     <footer>
@@ -81,11 +96,11 @@
         <div class="row">
             Need a help
             <div class="col">
-            <ul>
-                <li><a href="#">100-200-300</a></li>
-                <li><a href="#">E-mail</a></li>
-                <li><a href="#">Customer care</a></li>
-            </ul>
+                <ul>
+                    <li><a href="#">100-200-300</a></li>
+                    <li><a href="#">E-mail</a></li>
+                    <li><a href="#">Customer care</a></li>
+                </ul>
             </div>
         </div>
         <p>Copyrighted &copy; by Starbucks limited</p>
@@ -97,9 +112,21 @@
     </footer>
 </body>
 <script type="text/javascript">
-    function imgSlider(anything,col) {
+    function imgSlider(anything, col) {
         document.querySelector('#coffee').src = anything;
         document.getElementById('circle').style.background = col;
     }
+
+    function handleNewsletterSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.querySelector('input[type="email"]').value;
+        
+        if (email) {
+            alert('Thank you for subscribing! A confirmation email has been sent to ' + email);
+            form.reset();
+        }
+    }
 </script>
+
 </html>
